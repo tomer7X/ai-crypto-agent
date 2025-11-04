@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 // Import routes
 import authRoutes from './routes/auth.js';
 import profileRoutes from './routes/profile.js';
+import cryptopanicRoutes from './routes/cryptopanic.js';
+import preferencesRoutes from './routes/preferences.js';
 
 dotenv.config();
 
@@ -20,6 +22,8 @@ app.use(cors({
 // Routes
 app.use('/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
+app.use('/api/news/cryptopanic', cryptopanicRoutes);
+app.use('/api/preferences', preferencesRoutes);
 
 // Start server
 app.listen(PORT, () => {

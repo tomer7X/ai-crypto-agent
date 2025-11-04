@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "title": "Sample Crypto News: Market rallies",
+      "published_at": "2025-11-04T08:00:00Z",
+      "domain": "example.com",
+      "url": "https://example.com/crypto-market-rallies",
+      "excerpt": "Bitcoin and Ethereum see gains after positive macro data.",
+      "sentiment": "positive"
+    },
+    {
+      "id": 2,
+      "title": "Sample Crypto News: Regulatory update",
+      "published_at": "2025-11-03T12:00:00Z",
+      "domain": "example.com",
+      "url": "https://example.com/crypto-regulation",
+      "excerpt": "New guidance issued for stablecoin issuers.",
+      "sentiment": "neutral"
+    }
+  ]
+}
