@@ -7,6 +7,7 @@ import authRoutes from './routes/auth.js';
 import profileRoutes from './routes/profile.js';
 import cryptopanicRoutes from './routes/cryptopanic.js';
 import preferencesRoutes from './routes/preferences.js';
+import cgSimpleRoutes from './routes/cg_simple.js';
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use('/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/news/cryptopanic', cryptopanicRoutes);
 app.use('/api/preferences', preferencesRoutes);
+app.use('/api/coins/', cgSimpleRoutes);
 
 // Start server
 app.listen(PORT, () => {
