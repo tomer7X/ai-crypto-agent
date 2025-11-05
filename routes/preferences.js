@@ -31,7 +31,7 @@ const validatePreferences = (data) => {
 
     // Validate investor_type
     if (data.investor_type) {
-        const validTypes = ['HODLer', 'Day Trader', 'NFT Collector', 'Swing Trader', 'other'];
+        const validTypes = ['HODLer', 'Day Trader', 'NFT Collector', 'Swing Trader', 'Other'];
         if (!validTypes.includes(data.investor_type)) {
             errors.push(`investor_type must be one of: ${validTypes.join(', ')}`);
         }
