@@ -1,10 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-
-// Import routes
 import authRoutes from './routes/auth.js';
-import profileRoutes from './routes/profile.js';
 import cryptopanicRoutes from './routes/cryptopanic.js';
 import preferencesRoutes from './routes/preferences.js';
 import cgSimpleRoutes from './routes/cg_simple.js';
@@ -22,7 +19,6 @@ app.use(cors({
 
 // Routes
 app.use('/auth', authRoutes);
-app.use('/api/profile', profileRoutes);
 app.use('/api/news/cryptopanic', cryptopanicRoutes);
 app.use('/api/preferences', preferencesRoutes);
 app.use('/api/coins/', cgSimpleRoutes);
