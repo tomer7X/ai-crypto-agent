@@ -6,6 +6,7 @@ import getPool from '../db/db.js';
 const router = express.Router();
 const ROUNDS = 10;
 
+const TOKEN_EXPIRY_HOURS = 24;
 
 
 
@@ -53,11 +54,14 @@ router.post("/login", express.json(), async (req, res) => {
         name: full_name 
       },
       process.env.JWT_SECRET || 'your-secret-key',
-      { expiresIn: '24h' }
+      { expiresIn: `${TOKEN_EXPIRY_HOURS}h` }
     );
+
+    const tokenExpirationDate = new Date(Date.now() + TOKEN_EXPIRY_HOURS * 60 * 60 * 1000);
 
     res.json({ 
       token,
+      tokenExpirationDate,
       user: {
         id,
         email,
