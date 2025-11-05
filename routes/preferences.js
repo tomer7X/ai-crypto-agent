@@ -22,7 +22,7 @@ const validatePreferences = (data) => {
         if (!Array.isArray(data.content)) {
             errors.push('content must be an array');
         } else {
-            const validContent = ['news', 'charts', 'social', 'fun'];
+            const validContent = ['news', 'charts', 'AI', 'fun'];
             if (!data.content.every(c => validContent.includes(c))) {
                 errors.push(`content must be one of: ${validContent.join(', ')}`);
             }
